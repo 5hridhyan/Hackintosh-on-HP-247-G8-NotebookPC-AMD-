@@ -1,9 +1,80 @@
-This Repo contains EFI/OC for HP 247 G8 NoteBook PC for Hackintosh, Monterey
+# HP 247 G8 – macOS Monterey OpenCore EFI
+OpenCore EFI configuration for **HP 247 G8 Notebook PC** running **macOS Monterey**.
 
-## 🛠 Hardware Environment (inxi)
+## 🖥 Hardware
+
+```
+CPU: AMD Ryzen 5 3500U (Zen+)
+iGPU: Radeon Vega 8 (Picasso)
+Display: 1366x768 BOE Panel
+Audio: AMD HD Audio + ACP Audio
+Network:
+  - Realtek RTL8111 Ethernet
+  - Realtek RTL8822CE WiFi + Bluetooth (Unsupported)
+Storage: NVMe SSD
+RAM: 6GB
+```
+
+---
+
+## ✅ Working
+
+* ✔ Touchpad
+* ✔ Keyboard
+* ✔ Audio (including media keys)
+* ✔ GPU Hardware Acceleration
+* ✔ Battery Status
+* ✔ Brightness Control
+* ✔ Volume Control
+
+---
+
+## ❌ Not Working
+
+* ✘ WiFi (Realtek RTL8822CE)
+* ✘ Bluetooth (Realtek RTL8822CE)
+* ✘ Suspend / Resume
+
+---
+
+## ⚠ Important Notes
+
+* Disable **NootedRed** during first boot setup if you experience boot issues.
+* This EFI is specifically tuned for HP 247 G8 BIOS F.68 firmware.
+* Some macOS features depending on unsupported hardware may remain broken.
+
+---
+
+## 📌 System Details
+
+From `inxi`:
+
+* Kernel: 6.18.13 (Arch Linux host)
+* Display Server: Wayland + Hyprland
+* Boot Type: UEFI
+* Storage Layout: Btrfs + LUKS2 + Swapfile + Zswap enabled
+
+---
+
+## 🚀 Credits / Tools
+
+* OpenCore Bootloader
+* AMD Hackintosh community resources
+* Dortania guides
+
+---
+
+##  Known Limitations
+
+* Sleep/wake stability is not guaranteed.
+* Wireless networking requires a supported replacement card.
+
+---
+
+
 
 <details>
-<summary>Click to expand full system specs</summary>
+<summary>Click to expand my full system specs</summary>
 
 ```text
 System:
@@ -161,17 +232,4 @@ Info:
     pkgs: 74 libs: 17 pm: pacman pkgs: 1351 libs: 321 tools: yay pm: flatpak
     pkgs: 21 Compilers: clang: 21.1.8 gcc: 15.2.1 Shell: Zsh v: 5.9
     running-in: kitty inxi: 3.3.40
-```
-
-Working:
-Touchpad 
-Keyboard
-Audio
-Graphic Accel
-Battery readings
-brightness/audio control from keyboard
-
-
-Not Working:
-Wifi/BT
-Suspend/Resume
+``````
