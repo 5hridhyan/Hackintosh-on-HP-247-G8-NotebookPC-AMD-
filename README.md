@@ -234,3 +234,5 @@ Info:
     pkgs: 21 Compilers: clang: 21.1.8 gcc: 15.2.1 Shell: Zsh v: 5.9
     running-in: kitty inxi: 3.3.40
 ``````
+
+some data from the config files are redacted to avoid Apple ID issues, users are requested to fill themselves
